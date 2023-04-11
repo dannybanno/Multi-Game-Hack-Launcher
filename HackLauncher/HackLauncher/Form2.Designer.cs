@@ -41,6 +41,7 @@ namespace HackLauncher
             this.panel3 = new System.Windows.Forms.Panel();
             this.detectStatus = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,9 +53,9 @@ namespace HackLauncher
             // 
             this.signIn.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(6)))), ((int)(((byte)(170)))));
-            this.signIn.Location = new System.Drawing.Point(53, 574);
+            this.signIn.Location = new System.Drawing.Point(77, 608);
             this.signIn.Name = "signIn";
-            this.signIn.Size = new System.Drawing.Size(402, 52);
+            this.signIn.Size = new System.Drawing.Size(408, 52);
             this.signIn.TabIndex = 4;
             this.signIn.Text = "Launch";
             this.signIn.UseVisualStyleBackColor = true;
@@ -64,7 +65,7 @@ namespace HackLauncher
             // 
             this.button1.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(6)))), ((int)(((byte)(170)))));
-            this.button1.Location = new System.Drawing.Point(56, 489);
+            this.button1.Location = new System.Drawing.Point(77, 517);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 52);
             this.button1.TabIndex = 5;
@@ -77,7 +78,7 @@ namespace HackLauncher
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(6)))), ((int)(((byte)(170)))));
-            this.button2.Location = new System.Drawing.Point(263, 489);
+            this.button2.Location = new System.Drawing.Point(284, 517);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(201, 52);
             this.button2.TabIndex = 6;
@@ -88,7 +89,7 @@ namespace HackLauncher
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(56, 45);
+            this.panel1.Location = new System.Drawing.Point(77, 51);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(408, 363);
             this.panel1.TabIndex = 7;
@@ -105,7 +106,7 @@ namespace HackLauncher
             // panel2
             // 
             this.panel2.Controls.Add(this.gameName);
-            this.panel2.Location = new System.Drawing.Point(56, 48);
+            this.panel2.Location = new System.Drawing.Point(74, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(408, 60);
             this.panel2.TabIndex = 8;
@@ -129,7 +130,7 @@ namespace HackLauncher
             this.exit.AutoSize = true;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.exit.ForeColor = System.Drawing.Color.Red;
-            this.exit.Location = new System.Drawing.Point(480, 3);
+            this.exit.Location = new System.Drawing.Point(521, 3);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(32, 31);
             this.exit.TabIndex = 0;
@@ -143,7 +144,7 @@ namespace HackLauncher
             this.panel3.Controls.Add(this.exit);
             this.panel3.Location = new System.Drawing.Point(1, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(514, 38);
+            this.panel3.Size = new System.Drawing.Size(560, 38);
             this.panel3.TabIndex = 9;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -153,7 +154,7 @@ namespace HackLauncher
             // 
             this.detectStatus.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detectStatus.ForeColor = System.Drawing.Color.Lime;
-            this.detectStatus.Location = new System.Drawing.Point(0, 10);
+            this.detectStatus.Location = new System.Drawing.Point(0, 7);
             this.detectStatus.Name = "detectStatus";
             this.detectStatus.Size = new System.Drawing.Size(408, 45);
             this.detectStatus.TabIndex = 1;
@@ -163,17 +164,21 @@ namespace HackLauncher
             // panel4
             // 
             this.panel4.Controls.Add(this.detectStatus);
-            this.panel4.Location = new System.Drawing.Point(56, 415);
+            this.panel4.Location = new System.Drawing.Point(77, 438);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(408, 68);
             this.panel4.TabIndex = 10;
+            // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(515, 648);
+            this.ClientSize = new System.Drawing.Size(557, 702);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -184,6 +189,7 @@ namespace HackLauncher
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -207,5 +213,6 @@ namespace HackLauncher
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label detectStatus;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

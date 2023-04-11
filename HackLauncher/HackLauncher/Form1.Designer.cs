@@ -47,6 +47,7 @@ namespace HackLauncher
             // 
             this.username.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.username.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(6)))), ((int)(((byte)(170)))));
             this.username.Location = new System.Drawing.Point(217, 181);
@@ -69,6 +70,7 @@ namespace HackLauncher
             // 
             this.password.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.password.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(6)))), ((int)(((byte)(170)))));
             this.password.Location = new System.Drawing.Point(217, 298);
@@ -79,9 +81,11 @@ namespace HackLauncher
             // 
             // signIn
             // 
+            this.signIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(6)))), ((int)(((byte)(170)))));
+            this.signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signIn.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(6)))), ((int)(((byte)(170)))));
-            this.signIn.Location = new System.Drawing.Point(210, 390);
+            this.signIn.Location = new System.Drawing.Point(217, 389);
             this.signIn.Name = "signIn";
             this.signIn.Size = new System.Drawing.Size(402, 52);
             this.signIn.TabIndex = 3;
@@ -127,6 +131,7 @@ namespace HackLauncher
             // 
             // showPass
             // 
+            this.showPass.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.showPass.Font = new System.Drawing.Font("Ubuntu", 10F, System.Drawing.FontStyle.Bold);
             this.showPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(6)))), ((int)(((byte)(170)))));
             this.showPass.Location = new System.Drawing.Point(621, 298);
@@ -198,6 +203,7 @@ namespace HackLauncher
             this.Name = "frmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "frmLogin";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
